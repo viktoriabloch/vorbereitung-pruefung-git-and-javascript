@@ -8,12 +8,12 @@ function start() {
 function update() {
     dy = dy + 0.5
 
+    let cy = parseFloat(circle.getAttribute("cy"))
+
     if (cy > 100) {
     dy = dy * (-1)    
     }
     
-
-    let cy = parseFloat(circle.getAttribute("cy"))
     cy = cy + dy
     circle.setAttribute ("cy", cy)
     window.requestAnimationFrame(update)
