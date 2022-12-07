@@ -6,10 +6,9 @@ function start() {
 }
 
 function update() {
-    dy = dy + 0.05
 
     let cy = parseFloat(circle.getAttribute("cy"))
-    cy = cy + dy
+    cy = cy + 1
     circle.setAttribute ("cy", cy)
     window.requestAnimationFrame(update)
 }
