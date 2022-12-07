@@ -3,9 +3,20 @@ let dy = 0
 let dx = 0
 
 function start() {
-    dx = 1
-    window.requestAnimationFrame(update)
+    const svg = document.querySelector("svg")
+    for (let i = 0; i < 10; i++){
+        const rect = document.createElementNS ("http://www.w3.org/2000/svg", "rect")
+        rect.setAttribute("x", i*10)
+        rect.setAttribute ("y", 0)
+        rect.setAttribute("width", 10)
+        rect.setAttribute("height", 10)
+        rect.setAttribute("fill", "black")
+        svg.appendChild(rect)
 }
+
+dx = 1
+
+window.requestAnimationFrame(update)
 
 function update() {
     
