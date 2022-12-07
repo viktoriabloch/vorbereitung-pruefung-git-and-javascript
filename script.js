@@ -13,10 +13,11 @@ function start() {
         rect.setAttribute("fill", "black")
         svg.appendChild(rect)
 }
-
 dx = 1
 
 window.requestAnimationFrame(update)
+}
+
 
 function update() {
     
